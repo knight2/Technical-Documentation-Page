@@ -1,670 +1,682 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link href="style.css" rel="stylesheet">
-        <link href="https://yandex.st/highlightjs/8.0/styles/vs.min.css" rel="stylesheet">
-        <link href="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" rel="text/javascript">
-        <link href="https://yandex.st/highlightjs/8.0/highlight.min.js" rel="text/javascript">
-        <script src="app.js" type="application/javascript"></script>
-    </head>
+<html lang="en" >
 
-    <nav id="navbar">
-        <header>Python Documentation</header>
-        <ul>
-          <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
-          <a class="nav-link" href="#Simple_Python_Data" rel="internal"><li>Simple Python Data</li></a>
-          <a class="nav-link" href="#Debugging" rel="internal"><li>Debugging</li></a>
-          <a class="nav-link" href="#Modules" rel="internal"><li>Modules</li></a>
-          <a class="nav-link" href="#Functions" rel="internal"><li>Functions</li></a>
-          <a class="nav-link" href="#Selection" rel="internal"><li>Selection</li></a>
-          <a class="nav-link" href="#Iteration" rel="internal"><li>Iteration</li></a>
-          <a class="nav-link" href="#Strings" rel="internal"><li>Strings</li></a>
-          <a class="nav-link" href="#Lists" rel="internal"><li>Lists</li></a>
-          <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
-        </ul>
-      </nav>
-      <main id="main-doc">
-        <section class="main-section" id="Introduction">
-          <header>Introduction</header>
-          <article>
-            <p>The single most important skill for a computer scientist is problem solving. Problem solving means the ability to formulate problems, think creatively about solutions, and express a solution clearly and accurately.</p>
-                  <p>
-              The programming language you will be learning is Python. Python is an example of a high-level language; other high-level languages you might have heard of are C++, PHP, and Java. There are two ways to use the Python interpreter: shell mode and program mode. In shell mode, you type Python expressions into the Python shell, and the interpreter immediately shows the result. We will be using the program mode. For example, by running a .py file in an interpreter:
-            </p>
-            <pre><code>print("My first program adds two numbers, 2 and 3:")
-      print(2 + 3)
-            </code></pre>
-                  <p> The execution will result in the following</p>
-            <pre><code>My first program adds two numbers, 2 and 3:
-      5</code></pre>
-          </article>
-        </section>
-        <section class="main-section" id="Simple_Python_Data">
-          <header>Simple Python Data</header>
-          <article>
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Documentation Page</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://yandex.st/highlightjs/8.0/styles/vs.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<nav id="navbar">
+  <header>Python Documentation</header>
+  <ul>
+    <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+    <a class="nav-link" href="#Simple_Python_Data" rel="internal"><li>Simple Python Data</li></a>
+    <a class="nav-link" href="#Debugging" rel="internal"><li>Debugging</li></a>
+    <a class="nav-link" href="#Modules" rel="internal"><li>Modules</li></a>
+    <a class="nav-link" href="#Functions" rel="internal"><li>Functions</li></a>
+    <a class="nav-link" href="#Selection" rel="internal"><li>Selection</li></a>
+    <a class="nav-link" href="#Iteration" rel="internal"><li>Iteration</li></a>
+    <a class="nav-link" href="#Strings" rel="internal"><li>Strings</li></a>
+    <a class="nav-link" href="#Lists" rel="internal"><li>Lists</li></a>
+    <a class="nav-link" href="#Reference" rel="internal"><li>Reference</li></a>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Introduction">
+    <header>Introduction</header>
+    <article>
+      <p>The single most important skill for a computer scientist is problem solving. Problem solving means the ability to formulate problems, think creatively about solutions, and express a solution clearly and accurately.</p>
             <p>
-              A value is one of the fundamental things — like a word or a number — that a program manipulates. The values we have seen so far are 5 (the result when we added 2 + 3), and "Hello, World!". We often refer to these values as objects and we will use the words value and object interchangeably.
-              
-              These objects are classified into different classes, or data types: 4 is an integer, and "Hello, World!" is a string, so-called because it contains a string or sequence of letters. You (and the interpreter) can identify strings because they are enclosed in quotation marks.
+        The programming language you will be learning is Python. Python is an example of a high-level language; other high-level languages you might have heard of are C++, PHP, and Java. There are two ways to use the Python interpreter: shell mode and program mode. In shell mode, you type Python expressions into the Python shell, and the interpreter immediately shows the result. We will be using the program mode. For example, by running a .py file in an interpreter:
+      </p>
+      <pre><code>print("My first program adds two numbers, 2 and 3:")
+print(2 + 3)
+      </code></pre>
+            <p> The execution will result in the following</p>
+      <pre><code>My first program adds two numbers, 2 and 3:
+5</code></pre>
+    </article>
+  </section>
+  <section class="main-section" id="Simple_Python_Data">
+    <header>Simple Python Data</header>
+    <article>
+      <p>
+        A value is one of the fundamental things — like a word or a number — that a program manipulates. The values we have seen so far are 5 (the result when we added 2 + 3), and "Hello, World!". We often refer to these values as objects and we will use the words value and object interchangeably.
+        
+        These objects are classified into different classes, or data types: 4 is an integer, and "Hello, World!" is a string, so-called because it contains a string or sequence of letters. You (and the interpreter) can identify strings because they are enclosed in quotation marks.
+
+If you are not sure what class a value falls into, Python has a function called type which can tell you.
+      </p>
+            <pre><code>print(type("Hello, World!"))
+print(type(17))
+print("Hello, World")
+      </code></pre>
       
-      If you are not sure what class a value falls into, Python has a function called type which can tell you.
-            </p>
-                  <pre><code>print(type("Hello, World!"))
-      print(type(17))
-      print("Hello, World")
-            </code></pre>
-            
-                  <p> Not surprisingly, strings belong to the class str and integers belong to the class int.
+            <p> Not surprisingly, strings belong to the class str and integers belong to the class int.
+
+        What about values like "17" and "3.2"? They look like numbers, but they are in quotation marks like strings.</p>
       
-              What about values like "17" and "3.2"? They look like numbers, but they are in quotation marks like strings.</p>
-            
-                  <pre><code>print(type("17"))
-      print(type("3.2"))
-            </code></pre>
-                  <p> 
-              One of the most powerful features of a programming language is the ability to manipulate variables. A variable is a name that refers to a value.
-      
-      Assignment statements create new variables and also give them values to refer to.
+            <pre><code>print(type("17"))
+print(type("3.2"))
+      </code></pre>
+            <p> 
+        One of the most powerful features of a programming language is the ability to manipulate variables. A variable is a name that refers to a value.
+
+Assignment statements create new variables and also give them values to refer to.
+
+<p>
+    <pre><code>message = "What's up, Doc?"
+n = 17
+pi = 3.14159
+  </code></pre>
+    <p> 
+    This example makes three assignments. The first assigns the string value "What's up, Doc?" to a new variable named message. The second gives the integer 17 to n, and the third assigns the floating-point number 3.14159 to a variable called pi.
+
+The assignment token, =, should not be confused with equality (we will see later that equality uses the == token). The assignment statement links a name, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:
+
+      </p>
+       <pre> <code>17 = n
+      </code></pre>
       
       <p>
-          <pre><code>message = "What's up, Doc?"
-      n = 17
-      pi = 3.14159
+        Operators are special tokens that represent computations like addition, multiplication and division. The values the operator works on are called operands.
+
+The following are all legal Python expressions whose meaning is more or less clear:
+
+      </p>
+      <pre><code>20 + 32
+hour - 1
+hour * 60 + minute
+minute / 60
+5 ** 2
+(5 + 9) * (15 - 7)
+      </code></pre>
+      <p>
+        The tokens +, -, and *, and the use of parenthesis for grouping, mean in Python what they mean in mathematics. The asterisk (*) is the token for multiplication, and ** is the token for exponentiation. Addition, subtraction, multiplication, and exponentiation all do what you expect.
+      </p>
+      
+      <p>
+        The input function allows the user to provide a prompt string. When the function is evaluated, the prompt is shown. The user of the program can enter the name and press return. When this happens the text that has been entered is returned from the input function, and in this case assigned to the variable n. Make sure you run this example a number of times and try some different names in the input box that appears.
+      </p>
+      <pre><code>n = input("Please enter your name: ")
+print("Hello", n)
+      </code></pre>
+      <p>
+        It is legal to make more than one assignment to the same variable. A new assignment makes an existing variable refer to a new value (and stop referring to the old value).</p>
+  <pre><code>bruce = 5
+print(bruce)
+bruce = 7
+print(bruce)
+      </code></pre>
+    </article>
+  </section>
+  <section class="main-section" id="Debugging">
+    <header>Debugging</header>
+    <article>
+ <p>
+          One of the most important skills you need to aquire is the ability to debug your programs. Debugging might be the most under-appreciated, and under-taught, skill in introductory computer science. For that reason we are introducing a series of “debugging interludes.” Debugging is a skill that you need to master over time, and some of the tips and tricks are specific to different aspects of Python programming.
+          
+          Perhaps the most important lesson in debugging is that it is largely avoidable – if you work carefully.
+        </p>
+        <ul>
+          <li>Everyone is a suspect (Except Python)! It’s common for beginner programmers to blame Python, but that should be your last resort. Remember that Python has been used to solve CS1 level problems millions of times by millions of other programmers. So, Python is probably not the problem.
+</li>
+          <li>Find clues. This is the biggest job of the detective and right now there are two important kinds of clues for you to understand.<ul>
+          <li>Error Messages</li>
+          <li>Print Statements</li>
+            </ul>
+</li>
+        </ul>
+        
+        <p> Parse errors happen when you make an error in the syntax of your program. Syntax errors are like making grammatical errors in writing. If you don’t use periods and commas in your writing then you are making it hard for other readers to figure out what you are trying to say. Similarly Python has certain grammatical rules that must be followed or else Python can’t figure out what you are trying to say.
+
+Usually ParseErrors can be traced back to missing punctuation characters, such as parenthesis, quotation marks, or commas. Remember that in Python commas are used to separate parameters to functions. Paretheses must be balanced, or else Python thinks that you are trying to include everything that follows as a parameter to some function.
+
+Here are a couple examples of Parse errors in the example program we have been using. See if you can figure out what caused them.
+        </p>
+        <pre><code>current_time_str = input("What is the current time (in hours 0-23)?")
+wait_time_str = input("How many hours do you want to wait"
+
+current_time_int = int(current_time_str)
+wait_time_int = int(wait_time_str)
+
+final_time_int = current_time_int + wait_time_int
+print(final_time_int)
         </code></pre>
-          <p> 
-          This example makes three assignments. The first assigns the string value "What's up, Doc?" to a new variable named message. The second gives the integer 17 to n, and the third assigns the floating-point number 3.14159 to a variable called pi.
+        <p>
+          Finding Clues How can you help yourself find these problems? One trick that can be very valuable in this situation is to simply start by commenting out the line number that is flagged as having the error. If you comment out line four, the error message now changes to point to line 5. Now you ask yourself, am I really that bad that I have two lines in a row that have errors on them? Maybe, so taken to the extreme, you could comment out all of the remaining lines in the program. Now the error message changes to TokenError: EOF in multi-line statement This is a very technical way of saying that Python got to the end of file (EOF) while it was still looking for something. In this case a right parenthesis.
+
+        </p>
+        <p>
+          TypeError
+TypeErrors occur when you you try to combine two objects that are not compatible. For example you try to add together an integer and a string. Usually type errors can be isolated to lines that are using mathematical operators, and usually the line number given by the error message is an accurate indication of the line.
+
+Here’s an example of a type error created by a Polish learner. See if you can find and fix the error.
+        </p>
+        <pre><code>a = input(uu'wpisz godzine')
+x = input(uu'wpisz liczbe godzin')
+int(x)
+int(a)
+h = x // 24
+s = x % 24
+print (h, s)
+a = a + s
+print ('godzina teraz %s' %a)
+        </code></pre>
+        <p>
+          Finding Clues One thing that can help you in this situation is to print out the values and the types of the variables involved in the statement that is causing the error. You might try adding a print statement after line 4 print(x, type(x)) You will see that at least we have confirmed that x is of type string. Now you need to start to work backward through the program. You need to ask yourself, where is x used in the program? x is used on lines 2, 3, and of course 5 and 6 (where we are getting an error). So maybe you move the print statement to be after line 2 and again after 3. Line 3 is where you expect the value of x to be changed to an integer. Could line 4 be mysteriously changine x back to a string? Not very likely. So the value and type of x is just what you would expect it to be after line 2, but not after line 3. This helps you isolate the problem to line 3. In fact if you employ one of our earlier techniques of commenting out line 3 you will see that this has no impact on the error, and is a big clue that line 3 as it is currently written is useless.
+
+        </p>
+        
+        <p>
+          NameError
+Name errors almost always mean that you have used a variable before it has a value. Often NameErrors are simply caused by typos in your code. They can be hard to spot if you don’t have a good eye for catching spelling mistakes. Other times you may simply mis-remember the name of a variable or even a function you want to call. You have seen one example of a NameError at the beginning of this section. Here is another one. See if you can get this program to run successfully:
+        </p>
+        <pre><code>n = input("What time is it now (in hours)?")
+n = imt(n)
+m = input("How many hours do you want to wait?")
+m = int(m)
+q = m % 12
+print("The time is now", q)</code></pre>
+        
+        <p>
+          ValueError
+Value errors occur when you pass a parameter to a function and the function is expecting a certain type, but you pass it a different type. We can illustrate that with this particular program in two different ways.
+        </p>
+        
+        <pre><code>current_time_str = input("What is the current time (in hours 0-23)?")
+current_time_int = int(current_time_str)
+
+wait_time_str = input("How many hours do you want to wait")
+wait_time_int = int(wait_time_int)
+
+final_time_int = current_time_int + wait_time_int
+          print(final_time_int)</code></pre>
+    </article>
+  </section>  
+  <section class="main-section" id="Modules">
+    <header>Modules</header>
+    <article>
+      <p> A module is a file containing Python definitions and statements intended for use in other Python programs. There are many Python modules that come with Python as part of the standard library. One of the most important things to realize about modules is the fact that they are data objects, just like any other data in Python. Module objects simply contain other Python elements.</p>
       
-      The assignment token, =, should not be confused with equality (we will see later that equality uses the == token). The assignment statement links a name, on the left hand side of the operator, with a value, on the right hand side. This is why you will get an error if you enter:
+      <h2> The math module</h2>
+      <p>The math module contains the kinds of mathematical functions you would typically find on your calculator and some mathematical constants like pi and e. As we noted above, when we import math, we create a reference to a module object that contains these elements.</p>
+      <pre><code>import math
+print(math.pi)
+print(math.e)
+
+print(math.sqrt(2.0))
+
+print(math.sin(math.radians(90)))   # sin of 90 degrees
+      </code></pre>
       
+      <h2> The random module</h2>
+      <p>We often want to use random numbers in programs. Here are a few typical uses: </p>
+      <li> To play a game of chance where the computer needs to throw some dice, pick a number, or flip a coin.</li>
+      <li>To shuffle a deck of playing cards randomly.</li>
+      <li>To randomly allow a new enemy spaceship to appear and shoot at you</li>
+      <li>To simulate possible rainfall when we make a computerized model for estimating the environmental impact of building a dam</li>
+      <li>For encrypting your banking session on the Internet.</li>
+      
+      <p>Python provides a module random that helps with tasks like this. You can take a look at it in the documentation. Here are the key things we can do with it.</p>
+      <pre><code>import random
+prob = random.random()
+print(prob)
+
+diceThrow = random.randrange(1, 7)       # return an int, one of 1,2,3,4,5,6
+print(diceThrow)
+      </code></pre>
+      <p>Press the run button a number of times. Note that the values change each time. These are random numbers.
+
+The randrange function generates an integer between its lower and upper argument, using the same semantics as range — so the lower bound is included, but the upper bound is excluded. All the values have an equal probability of occurring (i.e. the results are uniformly distributed).
+
+The random() function returns a floating point number in the range [0.0, 1.0) — the square bracket means “closed interval on the left” and the round parenthesis means “open interval on the right”. In other words, 0.0 is possible, but all returned numbers will be strictly less than 1.0. It is usual to scale the results after calling this method, to get them into a range suitable for your application.
+
+In the case shown here, we’ve converted the result of the method call to a number in the range [0.0, 5.0). Once more, these are uniformly distributed numbers — numbers close to 0 are just as likely to occur as numbers close to 0.5, or numbers close to 1.0. If you continue to press the run button you will see random values between 0.0 and up to but not including 5.0.</p>
+      <pre><code>import random
+prob = random.random()
+result = prob * 5
+print(result)
+      </code></pre>
+    </article>
+  </section> 
+  <section class="main-section" id="Functions">
+    <header>Functions</header>
+    <article>
+      <p>In Python, a function is a named sequence of statements that belong together. Their primary purpose is to help us organize programs into chunks that match how we think about the solution to the problem.
+
+The syntax for a function definition is:
+
+      </p>
+      <pre><code>def name( parameters ):
+        statements</code></pre>
+      <p>You can make up any names you want for the functions you create, except that you can’t use a name that is a Python keyword, and the names must follow the rules for legal identifiers that were given previously. The parameters specify what information, if any, you have to provide in order to use the new function. Another way to say this is that the parameters specify what the function needs to do its work.
+
+There can be any number of statements inside the function, but they have to be indented from the def. In the examples in this book, we will use the standard indentation of four spaces. Function definitions are the second of several compound statements we will see, all of which have the same pattern:
+
+      </p>
+      <ol>
+        <li>A header line which begins with a keyword and ends with a colon.</li>
+        <li>A body consisting of one or more Python statements, each indented the same amount – 4 spaces is the Python standard – from the header line.</li>
+      </ol>
+      
+      <h2> Functions that Return Values</h2>
+      <p>Most functions require arguments, values that control how the function does its job. For example, if you want to find the absolute value of a number, you have to indicate what the number is. Python has a built-in function for computing the absolute value:</p>
+      <pre><code>print(abs(5))
+
+print(abs(-5))
+      </code></pre>
+      <p>In this example, the arguments to the abs function are 5 and -5.
+
+Some functions take more than one argument. For example the math module contains a function called pow which takes two arguments, the base and the exponent.</p>
+      <pre><code>import math
+print(math.pow(2, 3))
+
+print(math.pow(7, 4))
+      </code></pre>
+      <p>Functions that return values are sometimes called fruitful functions. In many other languages, a chunk that doesn’t return a value is called a procedure, but we will stick here with the Python way of also calling it a function, or if we want to stress it, a non-fruitful function.</p>
+      <p>How do we write our own fruitful function? Let’s start by creating a very simple mathematical function that we will call square. The square function will take one number as a parameter and return the result of squaring that number. </p>
+      <pre><code>def square(x):
+    y = x * x
+    return y
+
+toSquare = 10
+result = square(toSquare)
+print("The result of", toSquare, "squared is", result)
+      </code></pre>
+      
+      <h2>The Accumulator Pattern</h2>
+      <p>In the previous example, we wrote a function that computes the square of a number. The algorithm we used in the function was simple: multiply the number by itself. In this section we will reimplement the square function and use a different algorithm, one that relies on addition instead of multiplication.</p>
+
+<p>If you want to multiply two numbers together, the most basic approach is to think of it as repeating the process of adding one number to itself. The number of repetitions is where the second number comes into play. For example, if we wanted to multiply three and five, we could think about it as adding three to itself five times. Three plus three is six, plus three is nine, plus three is 12, and finally plus three is 15. Generalizing this, if we want to implement the idea of squaring a number, call it n, we would add n to itself n times.</p>
+
+<p>Do this by hand first and try to isolate exactly what steps you take. You’ll find you need to keep some “running total” of the sum so far, either on a piece of paper, or in your head. Remembering things from one step to the next is precisely why we have variables in a program. This means that we will need some variable to remember the “running total”. It should be initialized with a value of zero. Then, we need to update the “running total” the correct number of times. For each repetition, we’ll want to update the running total by adding the number to it.</p>
+
+<p>In words we could say it this way. To square the value of n, we will repeat the process of updating a running total n times. To update the running total, we take the old value of the “running total” and add n. That sum becomes the new value of the “running total”.</p>
+
+<p>Here is the program in activecode. Note that the heading of the function definition is the same as it was before. All that has changed is the details of how the squaring is done. This is a great example of “black box” design. We can change out the details inside of the box and still use the function exactly as we did before.
+
+      </p>
+      <pre><code>def square(x):
+    runningtotal = 0
+    for counter in range(x):
+        runningtotal = runningtotal + x
+
+    return runningtotal
+
+toSquare = 10
+squareResult = square(toSquare)
+print("The result of", toSquare, "squared is", squareResult)
+      </code></pre>
+      
+    </article>
+  </section>  
+  <section class="main-section" id="Selection">
+    <header>Selection</header>
+    <article>
+      <h2> Boolean Values and Boolean Expressions</h2>
+      <p>The Python type for storing true and false values is called bool, named after the British mathematician, George Boole. George Boole created Boolean Algebra, which is the basis of all modern computer arithmetic.</p>
+      <p>There are only two boolean values. They are True and False. Capitalization is important, since true and false are not boolean values (remember Python is case sensitive). </p>
+      <pre><code>print(True)
+print(type(True))
+print(type(False))
+      </code></pre>
+      <p>Boolean values are not strings!
+It is extremely important to realize that True and False are not strings. They are not surrounded by quotes. They are the only two values in the data type bool. Take a close look at the types shown below.
+      </p>
+      <pre><code>print(type(True))
+print(type("True"))
+      </code></pre>
+      <p>A boolean expression is an expression that evaluates to a boolean value. The equality operator, ==, compares two values and produces a boolean value related to whether the two values are equal to one another.</p>
+      <pre><code>print(5 == 5)
+print(5 == 6)
+      </code></pre>
+      <p>In the first statement, the two operands are equal, so the expression evaluates to True. In the second statement, 5 is not equal to 6, so we get False.
+
+The == operator is one of six common comparison operators; the others are:
+
+      </p>
+      <pre><code>x != y               # x is not equal to y
+x > y                # x is greater than y
+x < y                # x is less than y
+x >= y               # x is greater than or equal to y
+x <= y               # x is less than or equal to y
+     </code></pre>
+      
+        <h2>Logical Operators</h2>
+        <p>There are three logical operators: and, or, and not. The semantics (meaning) of these operators is similar to their meaning in English. For example, x > 0 and x < 10 is true only if x is greater than 0 and at the same time, x is less than 10. How would you describe this in words? You would say that x is between 0 and 10, not including the endpoints.</p>
+          <p>n % 2 == 0 or n % 3 == 0 is true if either of the conditions is true, that is, if the number is divisible by 2 or divisible by 3. In this case, one, or the other, or both of the parts has to be true for the result to be true.</p>
+        <p>Finally, the not operator negates a boolean expression, so not  x > y is true if x > y is false, that is, if x is less than or equal to y.</p>
+        <pre><code>x = 5
+print(x > 0 and x < 10)
+
+n = 25
+print(n % 2 == 0 or n % 3 == 0)</code></pre>
+          <p>In order to write useful programs, we almost always need the ability to check conditions and change the behavior of the program accordingly. Selection statements, sometimes also referred to as conditional statements, give us this ability. The simplest form of selection is the if statement. This is sometimes referred to as binary selection since there are two possible paths of execution.</p>
+          <pre><code>x = 15
+
+if x % 2 == 0:
+    print(x, "is even")
+else:
+    print(x, "is odd") </code></pre>
+          <p>Another form of the if statement is one in which the else clause is omitted entirely. This creates what is sometimes called unary selection. In this case, when the condition evaluates to True, the statements are executed. Otherwise the flow of execution continues to the statement after the body of the if.
+
+          </p>
+          <pre><code>x = 10
+if x < 0:
+    print("The negative number ",  x, " is not valid here.")
+print("This is always printed")</code></pre>
+            <h2> Boolean Functions</h2>
+            <p>We have already seen that boolean values result from the evaluation of boolean expressions. Since the result of any expression evaluation can be returned by a function (using the return statement), functions can return boolean values. This turns out to be a very convenient way to hide the details of complicated tests. For example:
+
             </p>
-             <pre> <code>17 = n
-            </code></pre>
-            
-            <p>
-              Operators are special tokens that represent computations like addition, multiplication and division. The values the operator works on are called operands.
-      
-      The following are all legal Python expressions whose meaning is more or less clear:
-      
-            </p>
-            <pre><code>20 + 32
-      hour - 1
-      hour * 60 + minute
-      minute / 60
-      5 ** 2
-      (5 + 9) * (15 - 7)
-            </code></pre>
-            <p>
-              The tokens +, -, and *, and the use of parenthesis for grouping, mean in Python what they mean in mathematics. The asterisk (*) is the token for multiplication, and ** is the token for exponentiation. Addition, subtraction, multiplication, and exponentiation all do what you expect.
-            </p>
-            
-            <p>
-              The input function allows the user to provide a prompt string. When the function is evaluated, the prompt is shown. The user of the program can enter the name and press return. When this happens the text that has been entered is returned from the input function, and in this case assigned to the variable n. Make sure you run this example a number of times and try some different names in the input box that appears.
-            </p>
-            <pre><code>n = input("Please enter your name: ")
-      print("Hello", n)
-            </code></pre>
-            <p>
-              It is legal to make more than one assignment to the same variable. A new assignment makes an existing variable refer to a new value (and stop referring to the old value).</p>
-        <pre><code>bruce = 5
-      print(bruce)
-      bruce = 7
-      print(bruce)
-            </code></pre>
-          </article>
-        </section>
-        <section class="main-section" id="Debugging">
-          <header>Debugging</header>
-          <article>
-       <p>
-                One of the most important skills you need to aquire is the ability to debug your programs. Debugging might be the most under-appreciated, and under-taught, skill in introductory computer science. For that reason we are introducing a series of “debugging interludes.” Debugging is a skill that you need to master over time, and some of the tips and tricks are specific to different aspects of Python programming.
-                
-                Perhaps the most important lesson in debugging is that it is largely avoidable – if you work carefully.
-              </p>
-              <ul>
-                <li>Everyone is a suspect (Except Python)! It’s common for beginner programmers to blame Python, but that should be your last resort. Remember that Python has been used to solve CS1 level problems millions of times by millions of other programmers. So, Python is probably not the problem.
-      </li>
-                <li>Find clues. This is the biggest job of the detective and right now there are two important kinds of clues for you to understand.<ul>
-                <li>Error Messages</li>
-                <li>Print Statements</li>
-                  </ul>
-      </li>
-              </ul>
-              
-              <p> Parse errors happen when you make an error in the syntax of your program. Syntax errors are like making grammatical errors in writing. If you don’t use periods and commas in your writing then you are making it hard for other readers to figure out what you are trying to say. Similarly Python has certain grammatical rules that must be followed or else Python can’t figure out what you are trying to say.
-      
-      Usually ParseErrors can be traced back to missing punctuation characters, such as parenthesis, quotation marks, or commas. Remember that in Python commas are used to separate parameters to functions. Paretheses must be balanced, or else Python thinks that you are trying to include everything that follows as a parameter to some function.
-      
-      Here are a couple examples of Parse errors in the example program we have been using. See if you can figure out what caused them.
-              </p>
-              <pre><code>current_time_str = input("What is the current time (in hours 0-23)?")
-      wait_time_str = input("How many hours do you want to wait"
-      
-      current_time_int = int(current_time_str)
-      wait_time_int = int(wait_time_str)
-      
-      final_time_int = current_time_int + wait_time_int
-      print(final_time_int)
-              </code></pre>
-              <p>
-                Finding Clues How can you help yourself find these problems? One trick that can be very valuable in this situation is to simply start by commenting out the line number that is flagged as having the error. If you comment out line four, the error message now changes to point to line 5. Now you ask yourself, am I really that bad that I have two lines in a row that have errors on them? Maybe, so taken to the extreme, you could comment out all of the remaining lines in the program. Now the error message changes to TokenError: EOF in multi-line statement This is a very technical way of saying that Python got to the end of file (EOF) while it was still looking for something. In this case a right parenthesis.
-      
-              </p>
-              <p>
-                TypeError
-      TypeErrors occur when you you try to combine two objects that are not compatible. For example you try to add together an integer and a string. Usually type errors can be isolated to lines that are using mathematical operators, and usually the line number given by the error message is an accurate indication of the line.
-      
-      Here’s an example of a type error created by a Polish learner. See if you can find and fix the error.
-              </p>
-              <pre><code>a = input(uu'wpisz godzine')
-      x = input(uu'wpisz liczbe godzin')
-      int(x)
-      int(a)
-      h = x // 24
-      s = x % 24
-      print (h, s)
-      a = a + s
-      print ('godzina teraz %s' %a)
-              </code></pre>
-              <p>
-                Finding Clues One thing that can help you in this situation is to print out the values and the types of the variables involved in the statement that is causing the error. You might try adding a print statement after line 4 print(x, type(x)) You will see that at least we have confirmed that x is of type string. Now you need to start to work backward through the program. You need to ask yourself, where is x used in the program? x is used on lines 2, 3, and of course 5 and 6 (where we are getting an error). So maybe you move the print statement to be after line 2 and again after 3. Line 3 is where you expect the value of x to be changed to an integer. Could line 4 be mysteriously changine x back to a string? Not very likely. So the value and type of x is just what you would expect it to be after line 2, but not after line 3. This helps you isolate the problem to line 3. In fact if you employ one of our earlier techniques of commenting out line 3 you will see that this has no impact on the error, and is a big clue that line 3 as it is currently written is useless.
-      
-              </p>
-              
-              <p>
-                NameError
-      Name errors almost always mean that you have used a variable before it has a value. Often NameErrors are simply caused by typos in your code. They can be hard to spot if you don’t have a good eye for catching spelling mistakes. Other times you may simply mis-remember the name of a variable or even a function you want to call. You have seen one example of a NameError at the beginning of this section. Here is another one. See if you can get this program to run successfully:
-              </p>
-              <pre><code>n = input("What time is it now (in hours)?")
-      n = imt(n)
-      m = input("How many hours do you want to wait?")
-      m = int(m)
-      q = m % 12
-      print("The time is now", q)</code></pre>
-              
-              <p>
-                ValueError
-      Value errors occur when you pass a parameter to a function and the function is expecting a certain type, but you pass it a different type. We can illustrate that with this particular program in two different ways.
-              </p>
-              
-              <pre><code>current_time_str = input("What is the current time (in hours 0-23)?")
-      current_time_int = int(current_time_str)
-      
-      wait_time_str = input("How many hours do you want to wait")
-      wait_time_int = int(wait_time_int)
-      
-      final_time_int = current_time_int + wait_time_int
-                print(final_time_int)</code></pre>
-          </article>
-        </section>  
-        <section class="main-section" id="Modules">
-          <header>Modules</header>
-          <article>
-            <p> A module is a file containing Python definitions and statements intended for use in other Python programs. There are many Python modules that come with Python as part of the standard library. One of the most important things to realize about modules is the fact that they are data objects, just like any other data in Python. Module objects simply contain other Python elements.</p>
-            
-            <h2> The math module</h2>
-            <p>The math module contains the kinds of mathematical functions you would typically find on your calculator and some mathematical constants like pi and e. As we noted above, when we import math, we create a reference to a module object that contains these elements.</p>
-            <pre><code>import math
-      print(math.pi)
-      print(math.e)
-      
-      print(math.sqrt(2.0))
-      
-      print(math.sin(math.radians(90)))   # sin of 90 degrees
-            </code></pre>
-            
-            <h2> The random module</h2>
-            <p>We often want to use random numbers in programs. Here are a few typical uses: </p>
-            <li> To play a game of chance where the computer needs to throw some dice, pick a number, or flip a coin.</li>
-            <li>To shuffle a deck of playing cards randomly.</li>
-            <li>To randomly allow a new enemy spaceship to appear and shoot at you</li>
-            <li>To simulate possible rainfall when we make a computerized model for estimating the environmental impact of building a dam</li>
-            <li>For encrypting your banking session on the Internet.</li>
-            
-            <p>Python provides a module random that helps with tasks like this. You can take a look at it in the documentation. Here are the key things we can do with it.</p>
-            <pre><code>import random
-      prob = random.random()
-      print(prob)
-      
-      diceThrow = random.randrange(1, 7)       # return an int, one of 1,2,3,4,5,6
-      print(diceThrow)
-            </code></pre>
-            <p>Press the run button a number of times. Note that the values change each time. These are random numbers.
-      
-      The randrange function generates an integer between its lower and upper argument, using the same semantics as range — so the lower bound is included, but the upper bound is excluded. All the values have an equal probability of occurring (i.e. the results are uniformly distributed).
-      
-      The random() function returns a floating point number in the range [0.0, 1.0) — the square bracket means “closed interval on the left” and the round parenthesis means “open interval on the right”. In other words, 0.0 is possible, but all returned numbers will be strictly less than 1.0. It is usual to scale the results after calling this method, to get them into a range suitable for your application.
-      
-      In the case shown here, we’ve converted the result of the method call to a number in the range [0.0, 5.0). Once more, these are uniformly distributed numbers — numbers close to 0 are just as likely to occur as numbers close to 0.5, or numbers close to 1.0. If you continue to press the run button you will see random values between 0.0 and up to but not including 5.0.</p>
-            <pre><code>import random
-      prob = random.random()
-      result = prob * 5
-      print(result)
-            </code></pre>
-          </article>
-        </section> 
-        <section class="main-section" id="Functions">
-          <header>Functions</header>
-          <article>
-            <p>In Python, a function is a named sequence of statements that belong together. Their primary purpose is to help us organize programs into chunks that match how we think about the solution to the problem.
-      
-      The syntax for a function definition is:
-      
-            </p>
-            <pre><code>def name( parameters ):
-              statements</code></pre>
-            <p>You can make up any names you want for the functions you create, except that you can’t use a name that is a Python keyword, and the names must follow the rules for legal identifiers that were given previously. The parameters specify what information, if any, you have to provide in order to use the new function. Another way to say this is that the parameters specify what the function needs to do its work.
-      
-      There can be any number of statements inside the function, but they have to be indented from the def. In the examples in this book, we will use the standard indentation of four spaces. Function definitions are the second of several compound statements we will see, all of which have the same pattern:
-      
-            </p>
-            <ol>
-              <li>A header line which begins with a keyword and ends with a colon.</li>
-              <li>A body consisting of one or more Python statements, each indented the same amount – 4 spaces is the Python standard – from the header line.</li>
-            </ol>
-            
-            <h2> Functions that Return Values</h2>
-            <p>Most functions require arguments, values that control how the function does its job. For example, if you want to find the absolute value of a number, you have to indicate what the number is. Python has a built-in function for computing the absolute value:</p>
-            <pre><code>print(abs(5))
-      
-      print(abs(-5))
-            </code></pre>
-            <p>In this example, the arguments to the abs function are 5 and -5.
-      
-      Some functions take more than one argument. For example the math module contains a function called pow which takes two arguments, the base and the exponent.</p>
-            <pre><code>import math
-      print(math.pow(2, 3))
-      
-      print(math.pow(7, 4))
-            </code></pre>
-            <p>Functions that return values are sometimes called fruitful functions. In many other languages, a chunk that doesn’t return a value is called a procedure, but we will stick here with the Python way of also calling it a function, or if we want to stress it, a non-fruitful function.</p>
-            <p>How do we write our own fruitful function? Let’s start by creating a very simple mathematical function that we will call square. The square function will take one number as a parameter and return the result of squaring that number. </p>
-            <pre><code>def square(x):
-          y = x * x
-          return y
-      
-      toSquare = 10
-      result = square(toSquare)
-      print("The result of", toSquare, "squared is", result)
-            </code></pre>
-            
-            <h2>The Accumulator Pattern</h2>
-            <p>In the previous example, we wrote a function that computes the square of a number. The algorithm we used in the function was simple: multiply the number by itself. In this section we will reimplement the square function and use a different algorithm, one that relies on addition instead of multiplication.</p>
-      
-      <p>If you want to multiply two numbers together, the most basic approach is to think of it as repeating the process of adding one number to itself. The number of repetitions is where the second number comes into play. For example, if we wanted to multiply three and five, we could think about it as adding three to itself five times. Three plus three is six, plus three is nine, plus three is 12, and finally plus three is 15. Generalizing this, if we want to implement the idea of squaring a number, call it n, we would add n to itself n times.</p>
-      
-      <p>Do this by hand first and try to isolate exactly what steps you take. You’ll find you need to keep some “running total” of the sum so far, either on a piece of paper, or in your head. Remembering things from one step to the next is precisely why we have variables in a program. This means that we will need some variable to remember the “running total”. It should be initialized with a value of zero. Then, we need to update the “running total” the correct number of times. For each repetition, we’ll want to update the running total by adding the number to it.</p>
-      
-      <p>In words we could say it this way. To square the value of n, we will repeat the process of updating a running total n times. To update the running total, we take the old value of the “running total” and add n. That sum becomes the new value of the “running total”.</p>
-      
-      <p>Here is the program in activecode. Note that the heading of the function definition is the same as it was before. All that has changed is the details of how the squaring is done. This is a great example of “black box” design. We can change out the details inside of the box and still use the function exactly as we did before.
-      
-            </p>
-            <pre><code>def square(x):
-          runningtotal = 0
-          for counter in range(x):
-              runningtotal = runningtotal + x
-      
-          return runningtotal
-      
-      toSquare = 10
-      squareResult = square(toSquare)
-      print("The result of", toSquare, "squared is", squareResult)
-            </code></pre>
-            
-          </article>
-        </section>  
-        <section class="main-section" id="Selection">
-          <header>Selection</header>
-          <article>
-            <h2> Boolean Values and Boolean Expressions</h2>
-            <p>The Python type for storing true and false values is called bool, named after the British mathematician, George Boole. George Boole created Boolean Algebra, which is the basis of all modern computer arithmetic.</p>
-            <p>There are only two boolean values. They are True and False. Capitalization is important, since true and false are not boolean values (remember Python is case sensitive). </p>
-            <pre><code>print(True)
-      print(type(True))
-      print(type(False))
-            </code></pre>
-            <p>Boolean values are not strings!
-      It is extremely important to realize that True and False are not strings. They are not surrounded by quotes. They are the only two values in the data type bool. Take a close look at the types shown below.
-            </p>
-            <pre><code>print(type(True))
-      print(type("True"))
-            </code></pre>
-            <p>A boolean expression is an expression that evaluates to a boolean value. The equality operator, ==, compares two values and produces a boolean value related to whether the two values are equal to one another.</p>
-            <pre><code>print(5 == 5)
-      print(5 == 6)
-            </code></pre>
-            <p>In the first statement, the two operands are equal, so the expression evaluates to True. In the second statement, 5 is not equal to 6, so we get False.
-      
-      The == operator is one of six common comparison operators; the others are:
-      
-            </p>
-            <pre><code>x != y               # x is not equal to y
-      x > y                # x is greater than y
-      x < y                # x is less than y
-      x >= y               # x is greater than or equal to y
-      x <= y               # x is less than or equal to y
-           </code></pre>
-            
-              <h2>Logical Operators</h2>
-              <p>There are three logical operators: and, or, and not. The semantics (meaning) of these operators is similar to their meaning in English. For example, x > 0 and x < 10 is true only if x is greater than 0 and at the same time, x is less than 10. How would you describe this in words? You would say that x is between 0 and 10, not including the endpoints.</p>
-                <p>n % 2 == 0 or n % 3 == 0 is true if either of the conditions is true, that is, if the number is divisible by 2 or divisible by 3. In this case, one, or the other, or both of the parts has to be true for the result to be true.</p>
-              <p>Finally, the not operator negates a boolean expression, so not  x > y is true if x > y is false, that is, if x is less than or equal to y.</p>
-              <pre><code>x = 5
-      print(x > 0 and x < 10)
-      
-      n = 25
-      print(n % 2 == 0 or n % 3 == 0)</code></pre>
-                <p>In order to write useful programs, we almost always need the ability to check conditions and change the behavior of the program accordingly. Selection statements, sometimes also referred to as conditional statements, give us this ability. The simplest form of selection is the if statement. This is sometimes referred to as binary selection since there are two possible paths of execution.</p>
-                <pre><code>x = 15
-      
-      if x % 2 == 0:
-          print(x, "is even")
-      else:
-          print(x, "is odd") </code></pre>
-                <p>Another form of the if statement is one in which the else clause is omitted entirely. This creates what is sometimes called unary selection. In this case, when the condition evaluates to True, the statements are executed. Otherwise the flow of execution continues to the statement after the body of the if.
-      
-                </p>
-                <pre><code>x = 10
-      if x < 0:
-          print("The negative number ",  x, " is not valid here.")
-      print("This is always printed")</code></pre>
-                  <h2> Boolean Functions</h2>
-                  <p>We have already seen that boolean values result from the evaluation of boolean expressions. Since the result of any expression evaluation can be returned by a function (using the return statement), functions can return boolean values. This turns out to be a very convenient way to hide the details of complicated tests. For example:
-      
-                  </p>
-                  <pre><code>def isDivisible(x, y):
-          if x % y == 0:
-              result = True
-          else:
-              result = False
-      
-          return result
-      
-      print(isDivisible(10, 5)) </code></pre>
-          </article>
-        </section>  
-        <section class="main-section" id="Iteration">
-          <header>Iteration</header>
-          <article>
-            <p> Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well and people do poorly.</p>
-      
-      <p>Repeated execution of a sequence of statements is called iteration. Because iteration is so common, Python provides several language features to make it easier. We’ve already seen the for statement in a previous chapter. This is a very common form of iteration in Python. In this chapter we are going to look at the while statement — another way to have your program do iteration.
-      
-            </p>
-            <h2> The for loop revisited</h2>
-            <p>Recall that the for loop processes each item in a list. Each item in turn is (re-)assigned to the loop variable, and the body of the loop is executed. We saw this example in an earlier chapter.</p>
-            <pre><code>for f in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
-          print("Hi", f, "Please come to my party on Saturday")</code></pre>
-            <p>We have also seen iteration paired with the update idea to form the accumulator pattern. For example, to compute the sum of the first n integers, we could create a for loop using the range to produce the numbers 1 through n. Using the accumulator pattern, we can start with a running total variable initialized to 0 and on each iteration, add the current value of the loop variable. A function to compute this sum is shown below.</p>
-            <pre><code>def sumTo(aBound):
-          theSum = 0
-          for aNumber in range(1, aBound + 1):
-              theSum = theSum + aNumber
-      
-          return theSum
-      
-      print(sumTo(4))
-      
-      print(sumTo(1000))</code></pre>
-            
-            <h2>The while Statement</h2>
-            <p>There is another Python statement that can also be used to build an iteration. It is called the while statement. The while statement provides a much more general mechanism for iterating. Similar to the if statement, it uses a boolean expression to control the flow of execution. The body of while will be repeated as long as the controlling boolean expression evaluates to True.
-      
-            </p>
-            <p>Here is a new version of the summation program that uses a while statement.
-      
-            </p>
-            <pre><code>def sumTo(aBound):
-          """ Return the sum of 1+2+3 ... n """
-      
-          theSum  = 0
-          aNumber = 1
-          while aNumber <= aBound:
-              theSum = theSum + aNumber
-              aNumber = aNumber + 1
-          return theSum
-      
-      print(sumTo(4))
-      
-      print(sumTo(1000))</code></pre>
-          </article>
-        </section>  
-        <section class="main-section" id="Strings">
-          <header>Strings</header>
-          <article>
-            <p> So far we have seen built-in types like: int, float, bool, str and we’ve seen lists. int, float, and bool are considered to be simple or primitive data types because their values are not composed of any smaller parts. They cannot be broken down. On the other hand, strings and lists are different from the others because they are made up of smaller pieces. In the case of strings, they are made up of smaller strings each containing one character.</p>
-            <p>Types that are comprised of smaller pieces are called collection data types. Depending on what we are doing, we may want to treat a collection data type as a single entity (the whole), or we may want to access its parts. This ambiguity is useful.
-      
-            </p>
-            <p>Strings can be defined as sequential collections of characters. This means that the individual characters that make up the string are assumed to be in a particular order from left to right.
-      
-            </p>
-            <p>A string that contains no characters, often referred to as the empty string, is still considered to be a string. It is simply a sequence of zero characters and is represented by ‘’ or “” (two single or two double quotes with nothing in between).
-      
-            </p>
-            <h2>Operations on Strings</h2>
-            <p>In general, you cannot perform mathematical operations on strings, even if the strings look like numbers. The following are illegal (assuming that message has type string):
-      
-            </p>
-            <pre><code>message - 1
-      "Hello" / 123
-      message * "Hello"
-              "15" + 2</code></pre>
-            <p>Interestingly, the + operator does work with strings, but for strings, the + operator represents concatenation, not addition. Concatenation means joining the two operands by linking them end-to-end. For example:
-      
-            </p>
-            <pre><code>fruit = "banana"
-      bakedGood = " nut bread"
-      print(fruit + bakedGood) </code></pre>
-            <p>The output of this program is banana nut bread. The space before the word nut is part of the string and is necessary to produce the space between the concatenated strings. Take out the space and run it again.
-      
-            </p>
-            <p>The * operator also works on strings. It performs repetition. For example, 'Fun'*3 is 'FunFunFun'. One of the operands has to be a string and the other has to be an integer.
-      
-            </p>
-            <pre><code>print("Go" * 6)
-      
-      name = "Packers"
-      print(name * 3)
-      
-      print(name + "Go" * 3)
-      
-      print((name + "Go") * 3)</code></pre>
-            <h2>Index Operator: Working with the Characters of a String</h2>
-            <p>The indexing operator (Python uses square brackets to enclose the index) selects a single character from a string. The characters are accessed by their position or index value. </p>
-            <pre><code>school = "Luther College"
-      m = school[2]
-      print(m)
-      
-      lastchar = school[-1]
-      print(lastchar)</code></pre>
-            <p>The expression school[2] selects the character at index 2 from school, and creates a new string containing just this one character. The variable m refers to the result.</p>
-            <p>Remember that computer scientists often start counting from zero. The letter at index zero of "Luther College" is L. So at position [2] we have the letter t.</p>
-            
-            <h2>String Comparison</h2>
-            <p>The comparison operators also work on strings. To see if two strings are equal you simply write a boolean expression using the equality operator.</p>
-            <pre><code>word = "banana"
-      if word == "banana":
-          print("Yes, we have bananas!")
-      else:
-          print("Yes, we have NO bananas!")</code></pre>
-            <p>Other comparison operations are useful for putting words in lexicographical order. This is similar to the alphabetical order you would use with a dictionary, except that all the uppercase letters come before all the lowercase letters.</p>
-            <pre><code>word = "zebra"
-      
-      if word < "banana":
-          print("Your word, " + word + ", comes before banana.")
-      elif word > "banana":
-          print("Your word, " + word + ", comes after banana.")
-      else:
-          print("Yes, we have no bananas!")</code></pre>
-              <h2>Strings are Immutable</h2>
-              <p>One final thing that makes strings different from some other Python collection types is that you are not allowed to modify the individual characters in the collection. It is tempting to use the [] operator on the left side of an assignment, with the intention of changing a character in a string. For example, in the following code, we would like to change the first letter of greeting.
-      
-              </p>
-              
-              <pre><code>greeting = "Hello, world!"
-      greeting[0] = 'J'            # ERROR!
-      print(greeting)</code></pre>
-              <p>
-                Instead of producing the output Jello, world!, this code produces the runtime error TypeError: 'str' object does not support item assignment.
-      
-      Strings are immutable, which means you cannot change an existing string. The best you can do is create a new string that is a variation on the original.
-      
-              </p>
-              <pre><code>greeting = "Hello, world!"
-      newGreeting = 'J' + greeting[1:]
-      print(newGreeting)
-      print(greeting)            # same as it was</code></pre>
-              <h2>Traversal and the for Loop: By Item</h2>
-              <p>A lot of computations involve processing a collection one item at a time. For strings this means that we would like to process one character at a time. Often we start at the beginning, select each character in turn, do something to it, and continue until the end. This pattern of processing is called a traversal.
-      
-              </p>
-              <pre><code>for aname in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
-          invitation = "Hi " + aname + ".  Please come to my party on Saturday!"
-          print(invitation)</code></pre>
-              <h2>Traversal and the while Loop</h2>
-              <p>The while loop can also control the generation of the index values. Remember that the programmer is responsible for setting up the initial condition, making sure that the condition is correct, and making sure that something changes inside the body to guarantee that the condition will eventually fail.
-      
-              </p>
-              <pre><code>fruit = "apple"
-      
-      position = 0
-      while position < len(fruit):
-          print(fruit[position])
-          position = position + 1</code></pre>
-          </article>
-        </section>  
-        <section class="main-section" id="Lists">
-          <header>Lists</header>
-          <article>
-            <p> A list is a sequential collection of Python data values, where each value is identified by an index. The values that make up a list are called its elements. Lists are similar to strings, which are ordered collections of characters, except that the elements of a list can have any type and for any one list, the items can be of different types.</p>
-            <p>There are several ways to create a new list. The simplest is to enclose the elements in square brackets ( [ and ]).</p>
-            <pre><code>[10, 20, 30, 40]
-      ["spam", "bungee", "swallow"]</code></pre>
-            <p>The first example is a list of four integers. The second is a list of three strings. As we said above, the elements of a list don’t have to be the same type. The following list contains a string, a float, an integer, and another list.</p>
-            <pre><code>["hello", 2.0, 5, [10, 20]]</code></pre>
-            <p>A list within another list is said to be nested and the inner list is often called a sublist. Finally, there is a special list that contains no elements. It is called the empty list and is denoted [].
-      
-      As you would expect, we can also assign list values to variables and pass lists as parameters to functions.
-      
-            </p>
-            <pre><code>vocabulary = ["iteration", "selection", "control"]
-      numbers = [17, 123]
-      empty = []
-      mixedlist = ["hello", 2.0, 5*2, [10, 20]]
-      
-      print(numbers)
-      print(mixedlist)
-      newlist = [ numbers, vocabulary ]
-      print(newlist)</code></pre>
-            <h2>List Length</h2>
-            <p>As with strings, the function len returns the length of a list (the number of items in the list). However, since lists can have items which are themselves lists, it important to note that len only returns the top-most length. In other words, sublists are considered to be a single item when counting the length of the list.</p>
-            <pre><code>alist =  ["hello", 2.0, 5, [10, 20]]
-      print(len(alist))
-      print(len(['spam!', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]))</code></pre>
-            <h2>Accessing Elements</h2>
-            <p>The syntax for accessing the elements of a list is the same as the syntax for accessing the characters of a string. We use the index operator ( [] – not to be confused with an empty list). The expression inside the brackets specifies the index. Remember that the indices start at 0. Any integer expression can be used as an index and as with strings, negative index values will locate items from the right instead of from the left.</p>
-            <pre><code>numbers = [17, 123, 87, 34, 66, 8398, 44]
-      print(numbers[2])
-      print(numbers[9 - 8])
-      print(numbers[-2])
-      print(numbers[len(numbers) - 1])</code></pre>
-            <h2>List Membership</h2>
-            <p>in and not in are boolean operators that test membership in a sequence. We used them previously with strings and they also work here.</p>
-            <pre><code>fruit = ["apple", "orange", "banana", "cherry"]
-      
-      print("apple" in fruit)
-      print("pear" in fruit)</code></pre>
-            <h2>Concatenation and Repetition</h2>
-            <p>Again, as with strings, the + operator concatenates lists. Similarly, the * operator repeats the items in a list a given number of times.</p>
-            <pre><code>fruit = ["apple", "orange", "banana", "cherry"]
-      print([1, 2] + [3, 4])
-      print(fruit + [6, 7, 8, 9])
-      
-      print([0] * 4)
-      print([1, 2, ["hello", "goodbye"]] * 2) </code></pre>
-            <h2>List Slices</h2>
-            <p>The slice operation we saw with strings also work on lists. Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element). Recall also that if you omit the first index (before the colon), the slice starts at the beginning of the sequence. If you omit the second index, the slice goes to the end of the sequence.
-            </p>
-            <pre><code>a_list = ['a', 'b', 'c', 'd', 'e', 'f']
-      print(a_list[1:3])
-      print(a_list[:4])
-      print(a_list[3:])
-      print(a_list[:])</code></pre>
-            <h2>Lists are Mutable</h2>
-            <p>Unlike strings, lists are mutable. This means we can change an item in a list by accessing it directly as part of the assignment statement. Using the indexing operator (square brackets) on the left side of an assignment, we can update one of the list items.</p>
-            <pre><code>fruit = ["banana", "apple", "cherry"]
-      print(fruit)
-      
-      fruit[0] = "pear"
-      fruit[-1] = "orange"
-      print(fruit)</code></pre>
-            <h2>List Deletion</h2>
-            <p>Using slices to delete list elements can be awkward and therefore error-prone. Python provides an alternative that is more readable. The del statement removes an element from a list by using its position.
-      
-            </p>
-            <pre><code>a = ['one', 'two', 'three']
-      del a[1]
-      print(a)
-      
-      alist = ['a', 'b', 'c', 'd', 'e', 'f']
-      del alist[1:5]
-      print(alist)</code></pre>
-            <h2>List Methods</h2>
-            <p>The dot operator can also be used to access built-in methods of list objects. append is a list method which adds the argument passed to it to the end of the list. Continuing with this example, we show several other list methods. Many of them are easy to understand.</p>
-            <pre><code>mylist = []
-      mylist.append(5)
-      mylist.append(27)
-      mylist.append(3)
-      mylist.append(12)
-      print(mylist)
-      
-      mylist.insert(1, 12)
-      print(mylist)
-      print(mylist.count(12))
-      
-      print(mylist.index(3))
-      print(mylist.count(5))
-      
-      mylist.reverse()
-      print(mylist)
-      
-      mylist.sort()
-      print(mylist)
-      
-      mylist.remove(5)
-      print(mylist)
-      
-      lastitem = mylist.pop()
-      print(lastitem)
-      print(mylist)</code></pre>
-            <h2>Lists and for loops</h2>
-            <p>It is also possible to perform list traversal using iteration by item as well as iteration by index.</p>
-            <pre><code>fruits = ["apple", "orange", "banana", "cherry"]
-      
-      for afruit in fruits:     # by item
-          print(afruit)</code></pre>
-            <p>It almost reads like natural language: For (every) fruit in (the list of) fruits, print (the name of the) fruit.
-      
-              We can also use the indices to access the items in an iterative fashion.</p>
-            <pre><code>fruits = ["apple", "orange", "banana", "cherry"]
-      
-      for position in range(len(fruits)):     # by index
-          print(fruits[position])</code></pre>
-          </article>
-        </section>  
-        <section class="main-section" id="Reference">
-          <header>Reference</header>
-          <article>
-            <p>If you would like to learn more please visit
-              <a target="_blank" href="https://runestone.academy/runestone/static/thinkcspy/index.html"> this website</a> where all this content was sourced from </p>
-          </article>
-        </section>
-      </main>
-          
-          
+            <pre><code>def isDivisible(x, y):
+    if x % y == 0:
+        result = True
+    else:
+        result = False
+
+    return result
+
+print(isDivisible(10, 5)) </code></pre>
+    </article>
+  </section>  
+  <section class="main-section" id="Iteration">
+    <header>Iteration</header>
+    <article>
+      <p> Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well and people do poorly.</p>
+
+<p>Repeated execution of a sequence of statements is called iteration. Because iteration is so common, Python provides several language features to make it easier. We’ve already seen the for statement in a previous chapter. This is a very common form of iteration in Python. In this chapter we are going to look at the while statement — another way to have your program do iteration.
+
+      </p>
+      <h2> The for loop revisited</h2>
+      <p>Recall that the for loop processes each item in a list. Each item in turn is (re-)assigned to the loop variable, and the body of the loop is executed. We saw this example in an earlier chapter.</p>
+      <pre><code>for f in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
+    print("Hi", f, "Please come to my party on Saturday")</code></pre>
+      <p>We have also seen iteration paired with the update idea to form the accumulator pattern. For example, to compute the sum of the first n integers, we could create a for loop using the range to produce the numbers 1 through n. Using the accumulator pattern, we can start with a running total variable initialized to 0 and on each iteration, add the current value of the loop variable. A function to compute this sum is shown below.</p>
+      <pre><code>def sumTo(aBound):
+    theSum = 0
+    for aNumber in range(1, aBound + 1):
+        theSum = theSum + aNumber
+
+    return theSum
+
+print(sumTo(4))
+
+print(sumTo(1000))</code></pre>
+      
+      <h2>The while Statement</h2>
+      <p>There is another Python statement that can also be used to build an iteration. It is called the while statement. The while statement provides a much more general mechanism for iterating. Similar to the if statement, it uses a boolean expression to control the flow of execution. The body of while will be repeated as long as the controlling boolean expression evaluates to True.
+
+      </p>
+      <p>Here is a new version of the summation program that uses a while statement.
+
+      </p>
+      <pre><code>def sumTo(aBound):
+    """ Return the sum of 1+2+3 ... n """
+
+    theSum  = 0
+    aNumber = 1
+    while aNumber <= aBound:
+        theSum = theSum + aNumber
+        aNumber = aNumber + 1
+    return theSum
+
+print(sumTo(4))
+
+print(sumTo(1000))</code></pre>
+    </article>
+  </section>  
+  <section class="main-section" id="Strings">
+    <header>Strings</header>
+    <article>
+      <p> So far we have seen built-in types like: int, float, bool, str and we’ve seen lists. int, float, and bool are considered to be simple or primitive data types because their values are not composed of any smaller parts. They cannot be broken down. On the other hand, strings and lists are different from the others because they are made up of smaller pieces. In the case of strings, they are made up of smaller strings each containing one character.</p>
+      <p>Types that are comprised of smaller pieces are called collection data types. Depending on what we are doing, we may want to treat a collection data type as a single entity (the whole), or we may want to access its parts. This ambiguity is useful.
+
+      </p>
+      <p>Strings can be defined as sequential collections of characters. This means that the individual characters that make up the string are assumed to be in a particular order from left to right.
+
+      </p>
+      <p>A string that contains no characters, often referred to as the empty string, is still considered to be a string. It is simply a sequence of zero characters and is represented by ‘’ or “” (two single or two double quotes with nothing in between).
+
+      </p>
+      <h2>Operations on Strings</h2>
+      <p>In general, you cannot perform mathematical operations on strings, even if the strings look like numbers. The following are illegal (assuming that message has type string):
+
+      </p>
+      <pre><code>message - 1
+"Hello" / 123
+message * "Hello"
+        "15" + 2</code></pre>
+      <p>Interestingly, the + operator does work with strings, but for strings, the + operator represents concatenation, not addition. Concatenation means joining the two operands by linking them end-to-end. For example:
+
+      </p>
+      <pre><code>fruit = "banana"
+bakedGood = " nut bread"
+print(fruit + bakedGood) </code></pre>
+      <p>The output of this program is banana nut bread. The space before the word nut is part of the string and is necessary to produce the space between the concatenated strings. Take out the space and run it again.
+
+      </p>
+      <p>The * operator also works on strings. It performs repetition. For example, 'Fun'*3 is 'FunFunFun'. One of the operands has to be a string and the other has to be an integer.
+
+      </p>
+      <pre><code>print("Go" * 6)
+
+name = "Packers"
+print(name * 3)
+
+print(name + "Go" * 3)
+
+print((name + "Go") * 3)</code></pre>
+      <h2>Index Operator: Working with the Characters of a String</h2>
+      <p>The indexing operator (Python uses square brackets to enclose the index) selects a single character from a string. The characters are accessed by their position or index value. </p>
+      <pre><code>school = "Luther College"
+m = school[2]
+print(m)
+
+lastchar = school[-1]
+print(lastchar)</code></pre>
+      <p>The expression school[2] selects the character at index 2 from school, and creates a new string containing just this one character. The variable m refers to the result.</p>
+      <p>Remember that computer scientists often start counting from zero. The letter at index zero of "Luther College" is L. So at position [2] we have the letter t.</p>
+      
+      <h2>String Comparison</h2>
+      <p>The comparison operators also work on strings. To see if two strings are equal you simply write a boolean expression using the equality operator.</p>
+      <pre><code>word = "banana"
+if word == "banana":
+    print("Yes, we have bananas!")
+else:
+    print("Yes, we have NO bananas!")</code></pre>
+      <p>Other comparison operations are useful for putting words in lexicographical order. This is similar to the alphabetical order you would use with a dictionary, except that all the uppercase letters come before all the lowercase letters.</p>
+      <pre><code>word = "zebra"
+
+if word < "banana":
+    print("Your word, " + word + ", comes before banana.")
+elif word > "banana":
+    print("Your word, " + word + ", comes after banana.")
+else:
+    print("Yes, we have no bananas!")</code></pre>
+        <h2>Strings are Immutable</h2>
+        <p>One final thing that makes strings different from some other Python collection types is that you are not allowed to modify the individual characters in the collection. It is tempting to use the [] operator on the left side of an assignment, with the intention of changing a character in a string. For example, in the following code, we would like to change the first letter of greeting.
+
+        </p>
+        
+        <pre><code>greeting = "Hello, world!"
+greeting[0] = 'J'            # ERROR!
+print(greeting)</code></pre>
+        <p>
+          Instead of producing the output Jello, world!, this code produces the runtime error TypeError: 'str' object does not support item assignment.
+
+Strings are immutable, which means you cannot change an existing string. The best you can do is create a new string that is a variation on the original.
+
+        </p>
+        <pre><code>greeting = "Hello, world!"
+newGreeting = 'J' + greeting[1:]
+print(newGreeting)
+print(greeting)            # same as it was</code></pre>
+        <h2>Traversal and the for Loop: By Item</h2>
+        <p>A lot of computations involve processing a collection one item at a time. For strings this means that we would like to process one character at a time. Often we start at the beginning, select each character in turn, do something to it, and continue until the end. This pattern of processing is called a traversal.
+
+        </p>
+        <pre><code>for aname in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
+    invitation = "Hi " + aname + ".  Please come to my party on Saturday!"
+    print(invitation)</code></pre>
+        <h2>Traversal and the while Loop</h2>
+        <p>The while loop can also control the generation of the index values. Remember that the programmer is responsible for setting up the initial condition, making sure that the condition is correct, and making sure that something changes inside the body to guarantee that the condition will eventually fail.
+
+        </p>
+        <pre><code>fruit = "apple"
+
+position = 0
+while position < len(fruit):
+    print(fruit[position])
+    position = position + 1</code></pre>
+    </article>
+  </section>  
+  <section class="main-section" id="Lists">
+    <header>Lists</header>
+    <article>
+      <p> A list is a sequential collection of Python data values, where each value is identified by an index. The values that make up a list are called its elements. Lists are similar to strings, which are ordered collections of characters, except that the elements of a list can have any type and for any one list, the items can be of different types.</p>
+      <p>There are several ways to create a new list. The simplest is to enclose the elements in square brackets ( [ and ]).</p>
+      <pre><code>[10, 20, 30, 40]
+["spam", "bungee", "swallow"]</code></pre>
+      <p>The first example is a list of four integers. The second is a list of three strings. As we said above, the elements of a list don’t have to be the same type. The following list contains a string, a float, an integer, and another list.</p>
+      <pre><code>["hello", 2.0, 5, [10, 20]]</code></pre>
+      <p>A list within another list is said to be nested and the inner list is often called a sublist. Finally, there is a special list that contains no elements. It is called the empty list and is denoted [].
+
+As you would expect, we can also assign list values to variables and pass lists as parameters to functions.
+
+      </p>
+      <pre><code>vocabulary = ["iteration", "selection", "control"]
+numbers = [17, 123]
+empty = []
+mixedlist = ["hello", 2.0, 5*2, [10, 20]]
+
+print(numbers)
+print(mixedlist)
+newlist = [ numbers, vocabulary ]
+print(newlist)</code></pre>
+      <h2>List Length</h2>
+      <p>As with strings, the function len returns the length of a list (the number of items in the list). However, since lists can have items which are themselves lists, it important to note that len only returns the top-most length. In other words, sublists are considered to be a single item when counting the length of the list.</p>
+      <pre><code>alist =  ["hello", 2.0, 5, [10, 20]]
+print(len(alist))
+print(len(['spam!', 1, ['Brie', 'Roquefort', 'Pol le Veq'], [1, 2, 3]]))</code></pre>
+      <h2>Accessing Elements</h2>
+      <p>The syntax for accessing the elements of a list is the same as the syntax for accessing the characters of a string. We use the index operator ( [] – not to be confused with an empty list). The expression inside the brackets specifies the index. Remember that the indices start at 0. Any integer expression can be used as an index and as with strings, negative index values will locate items from the right instead of from the left.</p>
+      <pre><code>numbers = [17, 123, 87, 34, 66, 8398, 44]
+print(numbers[2])
+print(numbers[9 - 8])
+print(numbers[-2])
+print(numbers[len(numbers) - 1])</code></pre>
+      <h2>List Membership</h2>
+      <p>in and not in are boolean operators that test membership in a sequence. We used them previously with strings and they also work here.</p>
+      <pre><code>fruit = ["apple", "orange", "banana", "cherry"]
+
+print("apple" in fruit)
+print("pear" in fruit)</code></pre>
+      <h2>Concatenation and Repetition</h2>
+      <p>Again, as with strings, the + operator concatenates lists. Similarly, the * operator repeats the items in a list a given number of times.</p>
+      <pre><code>fruit = ["apple", "orange", "banana", "cherry"]
+print([1, 2] + [3, 4])
+print(fruit + [6, 7, 8, 9])
+
+print([0] * 4)
+print([1, 2, ["hello", "goodbye"]] * 2) </code></pre>
+      <h2>List Slices</h2>
+      <p>The slice operation we saw with strings also work on lists. Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element). Recall also that if you omit the first index (before the colon), the slice starts at the beginning of the sequence. If you omit the second index, the slice goes to the end of the sequence.
+      </p>
+      <pre><code>a_list = ['a', 'b', 'c', 'd', 'e', 'f']
+print(a_list[1:3])
+print(a_list[:4])
+print(a_list[3:])
+print(a_list[:])</code></pre>
+      <h2>Lists are Mutable</h2>
+      <p>Unlike strings, lists are mutable. This means we can change an item in a list by accessing it directly as part of the assignment statement. Using the indexing operator (square brackets) on the left side of an assignment, we can update one of the list items.</p>
+      <pre><code>fruit = ["banana", "apple", "cherry"]
+print(fruit)
+
+fruit[0] = "pear"
+fruit[-1] = "orange"
+print(fruit)</code></pre>
+      <h2>List Deletion</h2>
+      <p>Using slices to delete list elements can be awkward and therefore error-prone. Python provides an alternative that is more readable. The del statement removes an element from a list by using its position.
+
+      </p>
+      <pre><code>a = ['one', 'two', 'three']
+del a[1]
+print(a)
+
+alist = ['a', 'b', 'c', 'd', 'e', 'f']
+del alist[1:5]
+print(alist)</code></pre>
+      <h2>List Methods</h2>
+      <p>The dot operator can also be used to access built-in methods of list objects. append is a list method which adds the argument passed to it to the end of the list. Continuing with this example, we show several other list methods. Many of them are easy to understand.</p>
+      <pre><code>mylist = []
+mylist.append(5)
+mylist.append(27)
+mylist.append(3)
+mylist.append(12)
+print(mylist)
+
+mylist.insert(1, 12)
+print(mylist)
+print(mylist.count(12))
+
+print(mylist.index(3))
+print(mylist.count(5))
+
+mylist.reverse()
+print(mylist)
+
+mylist.sort()
+print(mylist)
+
+mylist.remove(5)
+print(mylist)
+
+lastitem = mylist.pop()
+print(lastitem)
+print(mylist)</code></pre>
+      <h2>Lists and for loops</h2>
+      <p>It is also possible to perform list traversal using iteration by item as well as iteration by index.</p>
+      <pre><code>fruits = ["apple", "orange", "banana", "cherry"]
+
+for afruit in fruits:     # by item
+    print(afruit)</code></pre>
+      <p>It almost reads like natural language: For (every) fruit in (the list of) fruits, print (the name of the) fruit.
+
+        We can also use the indices to access the items in an iterative fashion.</p>
+      <pre><code>fruits = ["apple", "orange", "banana", "cherry"]
+
+for position in range(len(fruits)):     # by index
+    print(fruits[position])</code></pre>
+    </article>
+  </section>  
+  <section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+      <p>If you would like to learn more please visit
+        <a target="_blank" href="https://runestone.academy/runestone/static/thinkcspy/index.html"> this website</a> where all this content was sourced from </p>
+    </article>
+  </section>
+</main>
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://yandex.st/highlightjs/8.0/highlight.min.js'></script>
+    <script  src="js/index.js"></script>
 
 
 
 
-    </html>
+</body>
+
+</html>
